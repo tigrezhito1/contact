@@ -1,0 +1,193 @@
+<ion-view title="PUESTOS Y AGENTES CONECTADOS" id="page36">
+
+  <ion-content  class='contact' padding="true" class="has-header">
+
+ 
+   <div class="spacer" ng-class="{'preload_1': logeandose==1}"></div>
+   <div class="spacer" ng-class="{'preload_1': grafic==1}"></div>
+
+    <div class="row" style="padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;">
+        <div class='col-20'>Servicio</div>
+        <div class='col-80' style='text-align: right;' ng-click = "showPopup()">{{serv.srvn}} &nbsp;&nbsp;<i class="icon ion-arrow-down-b"></i></div>
+     </div>
+
+
+      <div class="row" style="padding: 12px;padding-top: 10px;
+    padding-bottom: 5px;">
+        <div class='col-20'>Grupo</div>
+        <div class='col-80' style='text-align: right;' ng-click = "showPopup1()">{{col.grupo_agente}} &nbsp;&nbsp;<i class="icon ion-arrow-down-b"></i></div>
+     </div>
+
+     <hr style="background: #234;"></hr>
+
+
+
+<!--        <label class="item item-select" id="sLARELEVANTES-select15">
+        <span class="input-label">Servicio:</span>
+
+
+        <select ng-options="s as s.srvn for s in servicios track by s.id" ng-model="serv" ng-change='traecolas(serv)' ></select>
+
+      </label> -->
+
+
+
+<!--       <label class="item item-select" id="sLARELEVANTES-select19">
+        <span class="input-label">Grupo </span>
+
+
+
+        <select ng-options="s as s.grupo_agente for s in colas" ng-model="col" ng-change='seleccionacola(col)' ></select>
+
+
+      </label> -->
+
+
+
+   
+      
+    
+          
+
+            <table >
+            <tr class='resultado1'>
+
+              <th  colspan="2" >Agentes</th>
+              <th colspan="2"  >Puestos de Servicio</th>
+            
+               
+            </tr>
+            <tr>
+
+              <td class='tittd'>Agentes Libres</td>
+              <td  class='resultado'>{{reporte2.ali}}</td>
+              <td class='tittd'>Supervisores</td>
+              <td class='resultado'>{{reporte2.sup}}</td>
+
+            </tr>
+              <tr >
+
+              <td class='tittd' >Agentes Ocupados</td>
+              <td class='resultado'>{{reporte2.aoc}}</td>
+              <td class='tittd'>Operadores</td>
+              <td class='resultado'>{{reporte2.ope}}</td>
+
+            </tr>
+          </table> 
+
+
+         <table>
+            <tr class='resultado1'>
+
+             <th colspan="4" > <center> Tiempos de Grupo % </center></th>
+             
+             
+
+
+            </tr>
+
+            <tr>
+              <td class='tittd' >Not Ready </td>
+              <td class='resultado'>{{reporte2.nrd}}</td>
+              <td class='tittd'>Wat time</td> 
+               <td class='resultado'>{{reporte2.wtm}}</td> 
+
+            </tr>
+             <tr>
+              <td class='tittd' >After call Work(ACW) </td>
+              <td class='resultado'>{{reporte2.acw}}</td>
+              <td class='tittd'>Información Adicional</td> 
+               <td class='resultado'></td> 
+
+            </tr>
+            <tr></tr>
+
+          </table>
+
+
+        <!--   <button class="button button-balanced button-small" ng-click='reload2()'>
+        Actualizar
+      </button> -->
+
+
+<!-- <div class="row">
+  
+  <div class="col sli" ng-click='g1=1;g2=0;g3=0;grafica2()'>1</div>
+  <div class="col sli" ng-click='g1=0;g2=true;g3=false;grafica3()'>2</div>
+  <div class="col sli" ng-click='g1=0;g2=false;g3=true;grafica1()'>3</div>
+
+</div> -->
+
+<i ng-if='g1==1 && g2==0 && g3==0' ng-click='grafica2()' class="ion-android-arrow-dropright-circle" style='position: absolute;
+    font-size: 45px;
+    text-align: center;
+    color: #7b933f;    right: 11px;z-index:20;top: 330px;
+    right: 18px;'></i>
+
+<i ng-show='g2==true' ng-click='grafica3()' class="ion-android-arrow-dropright-circle" style='position: absolute;
+    font-size: 45px;
+    text-align: center;
+    color: #7b933f;   right: 11px; z-index: 20;top: 330px;
+    right: 18px;' ></i>
+
+<i ng-show='g3==true' ng-click='grafica1()' class="ion-android-arrow-dropright-circle" style='position: absolute;
+    font-size: 45px;
+    text-align: center;
+    color: #7b933f;right: 11px; z-index:20;top: 330px;
+    right: 18px;'></i>
+
+  <hr style="background: #234;"></hr>
+
+
+<center class='cuadro' ng-if='g1==1 && g2==0 && g3==0' ng-click='grafica2()' style='padding: 10px;'><ng-gauge size="300"  cap="butt" type="semi" thick="20" min="0" max="maxvalue" value="reporte2.aoc" cap="round"   foreground-color="#bcc633" background-color="rgba(123,234,123, 0.4)" append="agentes"></ng-gauge></center> 
+
+
+
+
+<center class='cuadro' ng-show='g2==true' ng-click='grafica3()' >
+<div  id="pie" style="height: 300px; width: 300px; margin: 0 auto"></div>
+</center>
+
+<center class='cuadro' ng-show='g3==true' ng-click='grafica1()'>
+<div  id="3grafica" style="height: 300px; width: 300px; margin: 0 auto"></div>
+</center>
+
+
+<style type="text/css">
+  
+.sli{
+
+     text-align: center;
+    border: 1px solid #7b933f;
+    color: #7b933f;
+
+}
+   
+</style>
+
+
+<!-- 
+FInnnnn
+
+     
+       
+
+     <center><ng-gauge size="300"  cap="butt" type="semi" thick="20" min="0" max="maxvalue" value="reporte2.aoc" cap="round"   foreground-color="#bcc633" background-color="rgba(123,234,123, 0.4)" append="agentes ocupados"></ng-gauge></center>
+        
+
+
+    <div id="pie" style="height: 400px; max-width: 600px; margin: 0 auto"></div>
+
+    <div id="3grafica" style="height: 400px; max-width: 600px; margin: 0 auto"></div>
+
+
+ -->
+
+
+
+  </ion-content>
+</ion-view>
+
+

@@ -1,0 +1,190 @@
+<ion-view title="ENCUESTAS" id="encuestas">
+
+  <ion-content  class='contact'  class="has-header">
+
+ 
+   <div class="spacer" ng-class="{'preload_1': logeandose==1}"></div>
+   <div class="spacer" ng-class="{'preload_1': grafic==1}"></div> 
+
+       <div padding="true" class="row" style="padding: 12px;padding-top: 5px;padding-bottom: 10px;">
+        <div class='col-20'>Servicio</div>
+        <div class='col-80' style='text-align: right;' ng-click = "showPopup()">{{servicio}} &nbsp;&nbsp;<i class="icon ion-arrow-down-b"></i></div>
+     </div>
+
+
+      <div padding="true" class="row" style="padding: 12px;padding-top: 10px;padding-bottom: 5px;">
+        <div class='col-20'>Pregunta</div>
+        <div class='col-80' style='text-align: right;' ng-click = "showPopup1()">{{pregunta}} &nbsp;&nbsp;<i class="icon ion-arrow-down-b"></i></div>
+     </div>
+
+ <div style='height: 10px;'></div>
+
+<!--        <label class="item item-select" id="sLARELEVANTES-select15">
+        <span class="input-label">Servicio:</span>
+
+
+        <select ng-options="s as s.srvn for s in servicios track by s.id" ng-model="serv" ng-change='traecolas(serv)' ></select>
+
+      </label>
+     <label class="item item-select" id="sLARELEVANTES-select19">
+        <span class="input-label">Cola </span>
+      
+
+
+        <select ng-options="s as s.cmpn for s in colas" ng-model="col" ng-change='seleccionacola(col)' ></select>
+
+
+      </label> -->
+
+
+
+
+   
+      
+            <div padding='true'>
+      
+            <table >
+            <tr class='resultado1'>
+
+              <th  colspan="4" >Encuestas</th>
+           
+            
+               
+            </tr>
+            <tr>
+
+              <td class='tittd'>Evaluados</td>
+              <td  class='resultado'>{{encuestas.enc_evaluados}}</td>
+              <td class='tittd'>No Evaluados</td>
+              <td class='resultado'>{{encuestas.enc_no_evaluados}}</td>
+
+            </tr>
+              <tr >
+
+              <td class='tittd' >Día</td>
+              <td class='resultado'>{{encuestas.enc_dia}}</td>
+              <td class='tittd'>Última Hora</td>
+              <td class='resultado'>{{encuestas.enc_ultima_hora}}</td>
+
+            </tr>
+          </table> 
+
+
+        <table ng-show='ventasflag'>
+          <tbody>
+            <tr>
+              <td >Gestiones</td>
+              <td class="resultado">{{gestiones}}</td>
+            </tr>
+            <tr>
+
+
+
+
+
+              <td >Contacto Titular</td>
+
+
+
+              <td class="resultado">{{contitular}}</td>
+              
+
+            </tr>
+
+            <tr>
+
+
+              <td >Ventas</td>
+              <td class="resultado">{{ventas}}</td>
+              
+
+            </tr>
+
+          
+
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+<div style='height: 20px;'></div>
+
+<!-- 
+   <center class='cuadro' ng-if='g1==1 && g2==0 && g3==0' ng-click='grafica2()' style='padding: 10px;'> <div id="barras" ></div></center> 
+
+
+
+
+<center class='cuadro' ng-show='g2==true' ng-click='grafica3()' >
+<div id="container"></div>
+</center>
+
+<center class='cuadro' ng-show='g3==true' ng-click='grafica1()'>
+<div id="pie"></div>
+</center>  -->
+
+
+
+
+    <i class="icon ion-android-arrow-dropright-circle" ng-show='g1' ng-click='grafica2()' style='position: absolute;
+    font-size: 45px;
+    text-align: center;
+    color: #7b933f;    right: 11px;z-index:20;top: 330px;
+    right: 18px;'></i>
+
+    <i class="icon ion-android-arrow-dropright-circle" ng-show='g2' ng-click='grafica3()' style='position: absolute;
+    font-size: 45px;
+    text-align: center;
+    color: #7b933f;    right: 11px;z-index:20;top: 330px;
+    right: 18px;'></i>
+
+    <i class="icon ion-android-arrow-dropright-circle" ng-show='g3' ng-click='grafica1()' style='position: absolute;
+    font-size: 45px;
+    text-align: center;
+    color: #7b933f;    right: 11px;z-index:20;top: 330px;
+    right: 18px;'></i>
+         
+
+      <center  ng-show='g1' ng-click='grafica2()'><div id="pie" min-width='100px;'></div></center>
+
+
+      <center ng-show='g2' ng-click='grafica3()'><div id="barras"></div></center>
+
+
+      <center  ng-show='g3' ng-click='grafica1()' ><div id="container"></div></center>
+
+ 
+
+<div id="pete" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+        <!--   <button class="button button-balanced button-small" ng-click='reload2()'>
+        Actualizar
+      </button> -->
+
+
+
+<!-- 
+FInnnnn
+
+     
+       
+
+     <center><ng-gauge size="300"  cap="butt" type="semi" thick="20" min="0" max="maxvalue" value="reporte2.aoc" cap="round"   foreground-color="#bcc633" background-color="rgba(123,234,123, 0.4)" append="agentes ocupados"></ng-gauge></center>
+        
+
+
+    <div id="pie" style="height: 400px; max-width: 600px; margin: 0 auto"></div>
+
+    <div id="3grafica" style="height: 400px; max-width: 600px; margin: 0 auto"></div>
+
+
+ -->
+
+
+
+  </ion-content>
+</ion-view>
+
+

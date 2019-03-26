@@ -1,0 +1,47 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-balanced">
+      <ion-nav-back-button></ion-nav-back-button>
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="side-menu21"></ion-nav-view>
+  </ion-side-menu-content>
+  <ion-side-menu side="left" id="side-menu21" style="background-color:#fff;">
+    <ion-content style="top:0px !important;" class="side-menu-left sider-menu">
+      <div class="spacer" style="width: 268px; height: 41px;"></div>
+      
+
+      <img src="img/logo.jpg" style="padding: 9px;">
+      <ion-list id="capital-list6">
+        <ion-item class="item-icon-left side-menu" id="capital-list-item19" ui-sref="menu.slarelevantes()" menu-close="">
+          <i class="icon ion-android-person"></i>SLA Relevantes del Servicio</ion-item>
+
+
+        <ion-item class="item-icon-left dark side-menu" id="capital-list-item17" ui-sref="menu.puestosyagentes()" menu-close="">
+          <i class="icon ion-android-contacts"></i>Puestos y Agentes Conectados </ion-item>
+
+
+        <ion-item class="item-icon-left dark side-menu" id="capital-list-item112" ui-sref="menu.marcadorpredictivo()" menu-close="">
+          <i class="icon ion-android-call"></i>Marcador Predictivo / Progresivo</ion-item>
+
+           <ion-item class="item-icon-left dark side-menu" id="capital-list-item112" ui-sref="menu.indicadores()" menu-close="">
+          <i class="icon ion-speedometer"></i>Indicadores del Negocio</ion-item>
+
+             <ion-item ng-if='menu.hasPermisoIVR' class="item-icon-left dark side-menu" id="capital-list-item112" ui-sref="menu.encuestas()" menu-close="">
+        <i class="icon ion-podium"></i>Encuestas</ion-item>
+
+
+          <br>
+
+          <ion-item padding="true"  style='border:0px;'>
+          <a  ng-click='salir()' id="login-button12" class="button button-balanced button-block">Salir</a>
+
+        </ion-item>
+
+       
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

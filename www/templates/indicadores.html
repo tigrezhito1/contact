@@ -1,0 +1,149 @@
+<ion-view title="INDICADORES" id="indicadores">
+
+  <ion-content  class='contact' padding="true" class="has-header">
+
+ 
+   <div class="spacer" ng-class="{'preload_1': logeandose==1}"></div>
+   <div class="spacer" ng-class="{'preload_1': grafic==1}"></div>
+
+       <div class="row" style="padding: 12px;padding-top: 5px;padding-bottom: 10px;">
+        <div class='col-20'>Servicio  </div>
+        <div class='col-80' ng-if='serv' style='text-align: right;' ng-click = "showPopup()">{{serv.srvn}} &nbsp;&nbsp;<i class="icon ion-arrow-down-b"></i></div>
+     </div>
+
+
+      <div class="row" style="padding: 12px;padding-top: 10px;padding-bottom: 5px;">
+        <div class='col-20'>Campaña</div>
+        <div class='col-80' style='text-align: right;' ng-if='col' ng-click = "showPopup1()">{{col.cmpn}} &nbsp;&nbsp;<i class="icon ion-arrow-down-b"></i></div>
+     </div>
+
+ <hr style="background: #234;"></hr>
+
+<!--        <label class="item item-select" id="sLARELEVANTES-select15">
+        <span class="input-label">Servicio:</span>
+
+
+        <select ng-options="s as s.srvn for s in servicios track by s.id" ng-model="serv" ng-change='traecolas(serv)' ></select>
+
+      </label>
+     <label class="item item-select" id="sLARELEVANTES-select19">
+        <span class="input-label">Cola </span>
+      
+
+
+        <select ng-options="s as s.cmpn for s in colas" ng-model="col" ng-change='seleccionacola(col)' ></select>
+
+
+      </label> -->
+
+
+
+
+   
+      
+    
+        <table ng-hide='ventasflag'>
+          <tbody>
+            <tr>
+              <td >Gestiones</td>
+              <td class="resultado">{{gestiones}}</td>
+            </tr>
+            <tr>
+
+
+
+
+
+              <td >Consultas</td>
+              <td class="resultado">{{consultas}}</td>
+              
+
+            </tr>
+
+            <tr>
+
+
+              <td >Reclamos</td>
+              <td class="resultado">{{reclamos}}</td>
+              
+
+            </tr>
+
+          
+
+
+          </tbody>
+
+        </table>
+
+
+        <table ng-show='ventasflag'>
+          <tbody>
+            <tr>
+              <td >Gestiones</td>
+              <td class="resultado">{{gestiones}}</td>
+            </tr>
+            <tr>
+
+
+
+
+
+              <td >Contacto Titular</td>
+
+
+
+              <td class="resultado">{{contitular}}</td>
+              
+
+            </tr>
+
+            <tr>
+
+
+              <td >Ventas</td>
+              <td class="resultado">{{ventas}}</td>
+              
+
+            </tr>
+
+          
+
+
+          </tbody>
+
+        </table>
+
+ <hr style="background: #234;"></hr>
+         <center class='cuadro'><div id="containerx">Refrescar Pagina</div></center>
+      
+
+        <!--   <button class="button button-balanced button-small" ng-click='reload2()'>
+        Actualizar
+      </button> -->
+
+
+
+<!-- 
+FInnnnn
+
+     
+       
+
+     <center><ng-gauge size="300"  cap="butt" type="semi" thick="20" min="0" max="maxvalue" value="reporte2.aoc" cap="round"   foreground-color="#bcc633" background-color="rgba(123,234,123, 0.4)" append="agentes ocupados"></ng-gauge></center>
+        
+
+
+    <div id="pie" style="height: 400px; max-width: 600px; margin: 0 auto"></div>
+
+    <div id="3grafica" style="height: 400px; max-width: 600px; margin: 0 auto"></div>
+
+
+ -->
+
+
+
+  </ion-content>
+</ion-view>
+
+

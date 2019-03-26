@@ -1,0 +1,10 @@
+<!-- <li style="text-decoration: none;list-style: none;padding: 10px;" ng-repeat="item in colas  " ng-click="seleccionacola(item);cierra()">{{item}}</li>
+ -->
+<li style="text-decoration: none;list-style: none;padding: 10px;" ng-repeat="item in colas |groupBy:'grupo_agente' " ng-click="seleccionacola(item);cierra()">{{item[0].grupo_agente}}</li>
+
+
+<!--  <li style="text-decoration: none;list-style: none;padding: 10px;" ng-repeat="(key, value) in colas | groupBy: 'grupo_agente'" ng-click="seleccionacola(key);cierra()">
+  {{ key }}
+   
+  </li>  -->
+         

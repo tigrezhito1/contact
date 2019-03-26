@@ -1,0 +1,15 @@
+{
+  "short_name": "Contact Center",
+  "name": "Contact Center",
+  "icons": [
+    {
+      "src":"img/favicon.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "index.html",
+  "background_color": "green",
+  "theme_color": "green",
+  "display": "standalone"
+}

@@ -1,0 +1,4 @@
+echo $JAVA_HOME /Library/Java/JavaVirtualMachines/1.7.0.jdk/Contents/Home
+
+
+export JAVA_HOME='/Applications/Android Studio.app/Contents/jre/jdk/Contents/Home'

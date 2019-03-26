@@ -1,0 +1,113 @@
+<ion-view title="SLA RELEVANTES" id="page11">
+  <ion-content  padding="true" class="has-header contact">
+
+
+
+    <div class="spacer" ng-class="{'preload_1': logeandose==1}"></div>
+
+    <div class="spacer" ng-class="{'preload_1': grafic==1}"></div>
+   
+
+
+     
+     <div class="row" style="padding: 12px;padding: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;">
+        <div class='col-20'>Servicio</div>
+        <div class='col-80' style='text-align: right;' ng-click = "showPopup()">{{serv.srvn}} &nbsp;&nbsp;<i class="icon ion-arrow-down-b"></i></div>
+     </div>
+
+
+
+<!--       <label class="item item-select" id="sLARELEVANTES-select15">
+        <span class="input-label">Servicio:</span>
+
+        <select ng-options="s as s.srvn for s in servicios  track by s.id" ng-model="serv" ng-change='traecolas(serv)' ></select> 
+
+      </label> -->
+
+      <div class="row" style="padding: 12px;padding-top: 10px;
+    padding-bottom: 5px;">
+        <div class='col-20'>Cola</div>
+        <div ng-if='col.cmpn' class='col-80' style='text-align: right;' ng-click = "showPopup1()"><p><span style='pointer-events: none'>{{col.cmpn}}</span> &nbsp;&nbsp;<i class="icon ion-arrow-down-b"></i></p></div>
+
+ <!--        <div ng-if='!col.cmpn' class='col-80' style='text-align: right;' ng-click = "showPopup1()">{{col.grupo_agente}} &nbsp;&nbsp;<i class="icon ion-arrow-down-b"></i></div>
+ -->
+      
+     </div>
+
+
+    <hr style="
+  
+    background: #234;"></hr>
+<!-- 
+      <label class="item item-select" id="sLARELEVANTES-select19">
+        <span class="input-label">Cola </span>
+   
+
+        <a ng-click = "showPopup1()">oooooo &nbsp;&nbsp;<i class="icon ion-arrow-down-b"></i></a>
+
+         <select ng-options="s as s.cmpn for s in colas" ng-model="col" ng-change='seleccionacola(col)' ></select>
+         
+      </label> -->
+
+
+        <table>
+          <tbody>
+            <tr>
+              <td >Llamadas Contestadas</td>
+              <td class="resultado">{{reporte1.r}}</td>
+            </tr>
+            <tr>
+
+
+
+
+
+              <td >Llamadas Abandonadas</td>
+              <td class="resultado">{{reporte1.a}}</td>
+              
+
+            </tr>
+
+            <tr>
+
+
+              <td >Llamadas en Espera</td>
+              <td class="resultado">{{reporte1.e}}</td>
+              
+
+            </tr>
+
+            <tr>
+
+
+              <td>Tiempo de Espera</td>
+              <td class="resultado">{{reporte1.tawg}}</td>
+
+             
+
+            </tr>
+            <tr></tr>
+
+
+          </tbody>
+
+        </table>
+      
+
+      
+      <hr style="
+  
+    background: #234;"></hr>
+
+   
+     <!--  <button class="button button-balanced button-small" ng-click='reload()'>
+        Actualizar
+      </button> -->
+
+
+      <div><center class='cuadro'><highchart id="chart1" config="chartConfig" class="span10"></highchart></center></div>
+
+  </ion-content>
+</ion-view>
